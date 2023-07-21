@@ -27,15 +27,8 @@
         <td>{{ country.name.common }}</td>
         <td>{{ country.capital }}</td>
         <td>{{ country.population }}</td>
-        <td><a href="#">Ver más</a></td>
+        <td><a [routerLink]="[ '/countries/by', country.cca3]">Info</a></td>
       </tr>
     </tbody>
   </table>
 </ng-template>
-
-
-<ul>
-  <li *ngFor="let country of countries">
-    {{ country.capital }} - {{ country.population }}
-  </li>
-</ul>
